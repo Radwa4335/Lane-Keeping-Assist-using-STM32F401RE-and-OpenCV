@@ -20,6 +20,7 @@ System Architecture
 - Detects lane boundaries and calculates the lateral deviation from the center.
 - Sends the deviation value to the STM32 via serial communication (UART).
 
+
 2. Microcontroller-Based Steering Control (STM32 - C)
 - Receives deviation data from Python via USART2.
 - Runs a PID control loop to correct the deviation and maintain lane centering.
@@ -34,6 +35,7 @@ Software Implementation
 - Detects lane markings using edge detection and Hough transforms.
 - Calculates deviation from the lane center.
 - Sends deviation via serial (UART) to STM32.
+
 
 2. Motor Control (C - STM32)
 - Reads deviation from serial input.
