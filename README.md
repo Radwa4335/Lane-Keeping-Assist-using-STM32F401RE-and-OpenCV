@@ -6,40 +6,40 @@ This project implements a Lane Keeping Assist (LKA) system that combines compute
 
 Features
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Lane Detection with OpenCV: Detects lane markings and calculates deviation.
-Serial Communication (UART): Sends deviation data from Python to STM32.
-STM32-Based PID Controller: Adjusts steering to keep the vehicle centered.
-DC Motor Actuation: Uses a Cytron MD10-POT motor driver to control steering.
-Optical Encoder Feedback: Measures steering position and velocity for precise control.
+- Lane Detection with OpenCV: Detects lane markings and calculates deviation.
+- Serial Communication (UART): Sends deviation data from Python to STM32.
+- STM32-Based PID Controller: Adjusts steering to keep the vehicle centered.
+- DC Motor Actuation: Uses a Cytron MD10-POT motor driver to control steering.
+- Optical Encoder Feedback: Measures steering position and velocity for precise control.
 
 
 System Architecture
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Lane Detection & Deviation Measurement (Python - OpenCV)
-Uses a modified version of this repository.
-Detects lane boundaries and calculates the lateral deviation from the center.
-Sends the deviation value to the STM32 via serial communication (UART).
+- Uses a modified version of this repository.
+- Detects lane boundaries and calculates the lateral deviation from the center.
+- Sends the deviation value to the STM32 via serial communication (UART).
 
 2. Microcontroller-Based Steering Control (STM32 - C)
-Receives deviation data from Python via USART2.
-Runs a PID control loop to correct the deviation and maintain lane centering.
-Generates PWM signals to drive the DC motor via the Cytron motor driver.
-Reads feedback from an optical encoder for precise steering adjustments.
+- Receives deviation data from Python via USART2.
+- Runs a PID control loop to correct the deviation and maintain lane centering.
+- Generates PWM signals to drive the DC motor via the Cytron motor driver.
+- Reads feedback from an optical encoder for precise steering adjustments.
 
 
 Software Implementation
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. Lane Detection (Python - OpenCV)
-Preprocesses the video stream.
-Detects lane markings using edge detection and Hough transforms.
-Calculates deviation from the lane center.
-Sends deviation via serial (UART) to STM32.
+- Preprocesses the video stream.
+- Detects lane markings using edge detection and Hough transforms.
+- Calculates deviation from the lane center.
+- Sends deviation via serial (UART) to STM32.
 
 2. Motor Control (C - STM32)
-Reads deviation from serial input.
-Runs a PID algorithm to compute steering correction.
-Generates PWM signals to control the DC motor.
-Reads encoder feedback to adjust steering.
+- Reads deviation from serial input.
+- Runs a PID algorithm to compute steering correction.
+- Generates PWM signals to control the DC motor.
+- Reads encoder feedback to adjust steering.
 
 
 Setup Instructions
