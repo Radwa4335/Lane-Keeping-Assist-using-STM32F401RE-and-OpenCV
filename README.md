@@ -53,15 +53,16 @@ Setup Instructions
 - STM32CubeIDE for STM32 firmware development
 
 2. Hardware Setup
-1. Connect DC motor to Cytron MD10-POT motor driver.
-2. Interface STM32F401RE Nucleo with motor driver and encoder.
-3. Link Python lane detection script to STM32 via UART.
-4. Power the system using 24V 17A power supply.
+-  Connect DC motor to Cytron MD10-POT motor driver.
+-  Interface STM32F401RE Nucleo with motor driver and encoder.
+-  Link Python lane detection script to STM32 via UART.
+-  Power the system using 24V 17A power supply.
 
 3. Running the System
-1. Running Lane Detection
+Running Lane Detection
 python lane_detection.py
-2. Flashing STM32 Code
+
+Flashing STM32 Code
 - Open STM32CubeIDE.
 - Load motor control firmware.
 - Flash the code to STM32F401RE.
