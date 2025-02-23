@@ -38,7 +38,7 @@ This project implements a **Lane Keeping Assist (LKA) system** using **computer 
 ## Installation & Setup
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/yourusername/LKA-System.git
+   git clone https://github.com/Radwa4335/LKA-System.git
    cd LKA-System
    ```
 2. **Python Lane Detection Setup**:
